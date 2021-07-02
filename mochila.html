@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochila</title>
+</head>
+<body>
+    <script>
+        mochila = new Array();
+        var item1 = ["faca",2];
+        item2 = ["espada",1];
+        item3 = ["feijao",5];
+        item4 = ["pregos",45];
+        
+        mochila.push(item1);
+        mochila.push(item2);
+        mochila.push(item3);
+        mochila.push(item4);
+
+
+        for (var linha = 0; linha < 4; linha++) { //Percorre o primeiro vetor entrando em cada elemento salvando a posicao iniciando 0 
+            for (var c = 0; c < 2; c++) {
+                document.write(mochila[linha][c] + " "); //Percorre a coluna
+            }   
+            document.write("<br>"); //Pula a linha
+        }
+
+
+
+    </script>
+</body>
+</html>
