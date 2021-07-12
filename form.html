@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form_style.css">
+
+    <title>Formulario</title>
+</head>
+<body>
+    <form name="curso1" id="curso1" action="#" method="post">
+        <label>Nome:</label>
+        <input type="text" name="fNome" value="Andre Luis Araujo">
+        <br>
+        <label>Senha:</label>
+        <input type="password" name="fSenha" value="123">
+        <br>
+        <input name="btEnviar" type="submit" value="Enviar">
+    </form>
+    <hr>
+
+    <script>
+        // var form = document.forms.length; //Aponta pra quantidade de formularios na pagina mas ainda não captura as coleções de input
+        //var form = document.forms[0].id; //Retorna o id do formulario em questão da ordem que segue a pagina
+        //var form = document.forms; //Retorna o objeto HTML com formulario
+        //var form = document.forms["curso2"].innerHTML; //Retorna o objeto HTML com formulario forma alternativa
+        var form = document.forms[0];
+        var el = form.elements;     //Forma organizada de se obter os elemtnso separando em duas variaveis
+                       
+        for (var index = 0; index < el.length-1; index++) {
+            el[index].style.backgroundColor="#ddd";
+            document.write(el[index]);            
+        }//end for
+ 
+    </script>
+    
+</body>
+</html>

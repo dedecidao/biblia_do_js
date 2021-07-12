@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+</head>
+<body>
+    <!-- Testando JS e manipulando dates -->
+    <script>
+        //Declaração de Variaveis incorporando o tipo Date.
+        var dt = new Date();
+        var diaSem = dt.getDay();
+        var mes = dt.getMonth(); //Puxa o mes atual soma mais um pois o js faz o uso do index 0 na contagem de meses do ano
+        var ano = dt.getFullYear();
+        var dia = dt.getDate();
+
+        //Arrays dos indices corretos para conversão do formato Data.
+        var semana = new Array("Domingo" , "Segunda" , "Terça" , "Quarta" , "Quinta" , "Sexta" , "Sábado");
+        var meses = new Array("Janeiro" , "Feveiro" , "Março" , "Abril" , "Maio" , "Junho",  "Julho", "Agosto" , "Setembro" , "Outubro" , "Novembro" , "Dezembro");
+        
+        document.write(semana[diaSem] + ", " + dia + " de(o) " + meses[mes] + " " + " de " + ano); //Impressao da data 
+
+        // Impressao de dias
+
+        /* 
+        Domingo = 0
+        Segunda = 1
+        Terça = 2
+        Quarta = 3
+        Quinta = 4
+        Sexta = 5
+        Sabado = 6
+        */
+    </script>
+    
+</body>
+</html>
