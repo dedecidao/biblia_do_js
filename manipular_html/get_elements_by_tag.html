@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get ELEMENTSSSSSSS by tag</title>
+</head>
+
+<body>
+
+    <p>Um</p>
+    <p>Dois</p>
+    <p>Tres</p>
+    <p>Quatro</p>
+    <p>Cinco</p>
+
+    <hr>
+
+
+    <script>
+        var TagsP = document.getElementsByTagName("p"); //Capturado as string P do html que é usada como tag em um vetor // getElementsByTagName("p")[2] = Podemos adicionar o indice dentro do parametro GetElementbyTagName 
+
+        document.write(TagsP[0].innerHTML); //Imprimindo na tela o indice 0 do elemento P e acessando dentro do objeto html o conteudo com innerHTML
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como funcionar o Inner Html que serve pra entrar dentro das tags Html</title>
+</head>
+
+<body>
+    <p id="texto">Insira algo na caixa</p>
+    <input id="caixa" type="text" value="Caixa">
+
+
+
+    <script>
+        var paragrafo = document.getElementById("texto");
+        paragrafo.innerHTML = "Novo pagrafo"; //Alterando o parafro dentro da TAG html usando o metodo INNERHTML!!
+
+
+        var caixa = document.getElementById("caixa");
+        caixa.value = "Curso Maluco"; // Alterando um value do html com js
+    </script>
+</body>
+
+</html>
