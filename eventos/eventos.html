@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Começando pelo OnClick</title>
+
+    <!-- #### STYLE ### -->
+    <style>
+        #div1 {
+            height: 500px;
+            width: 500px;
+            border: solid #000;
+        }
+        button {
+            display: inline-block;
+            height: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="div1" onmouseover="mudaCor(div1, '#000')"  onmouseout="mudaCor(this,'#FFF')" ></div>
+    <br>
+    <button onclick="mudaPos(this)">Clique em mim para mudar a minha posição para uma posição aleatoria</button>
+
+
+    <!--### SCRIPTS ### -->
+    <script>
+        function mudaPos(obj){
+            obj.style.position = "absolute";
+            obj.style.left = Math.random() * 1080 + "px";
+            obj.style.top = Math.random() * 1920 + "px";
+        }
+
+
+        function mudaCor(obj, cor){
+            obj.style.backgroundColor=cor;  
+        }
+
+    </script>
+    <!-- ### FIM DO JS ### -->
+</body>
+</html>

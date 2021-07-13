@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuação do conteudo de funções</title>
+</head>
+<body>
+
+    <script>
+        var numeros = new Array(10,5,10);
+
+
+        /* Funcao usada para calculo de medio soma todos os elementos do vetor e o divide pelo tamanho (lenght) */
+        function calculaMedia(nums){
+            /* Declaração de variaveis */
+            var tamanho = nums.length;
+            var total = 0;
+            
+            /* Repetição que percorre o vetor */
+            for (var i = 0; i < tamanho; i++) {
+                total = total + nums[i]; /* Forma alternativa de função ##### total += num[i] ####### */
+                
+            } /* Fim da For de Incremento aos valores do Vetor = soma Total */
+            return(total / tamanho);
+        } /* Fim da função Calculo de Média */
+        
+        /* Output */
+        calculaMedia(numeros);
+
+    </script>
+    
+</body>
+</html>
