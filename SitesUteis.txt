@@ -1,0 +1,31 @@
+https://www.freecodecamp.org/learn Site de desafios css! Possui a responsive web certification gratuita.
+
+https://andreasbm.github.io/web-skills/ Site contendo o mapa das linguagens junto com seus frameworks e contendo todos os links para redirecionamento para a sua documentação.
+
+
+2. Gitignore
+
+Uma coleção de templates de .gitignore
+
+https://lnkd.in/eUg9qhV
+
+
+3. Amplication
+
+Com o Amplication você consegue criar facilmente uma aplicação node.js em alguns cliques.
+
+https://amplication.com/
+
+
+4. Dareboost
+
+Ferramenta para rodar seu site e ter um relatório completo de velocidade e otimizações (muito melhor que o google pagespeed).
+
+https://lnkd.in/eTt7xFm
+
+
+5. Reactive Resume
+
+Um gerador de currículos grátis e open-source.
+
+https://rxresu.me
