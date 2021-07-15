@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Listener movimentando a div</title>
+    <style>
+        #dv1 {
+            width: 100px;
+            height: 100px;    
+            border: 1px solid #000;
+            background-color: #F00;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            box-shadow: 5px 5px #000;
+        }
+
+        #dv2 {
+            width: 100px;
+            height: 100px;    
+            border: 1px solid #000;
+            background-color: #00F;
+            position: absolute;
+            left: 1800px;
+            top: 800px;
+            box-shadow: 5px 5px #000;
+
+        }
+
+    </style>
+    <!--## Estudo dos codigos de teclas pressionados aninhados a                          ##
+        ## eventos com movimentação pelo teclado cola de cods das 4 arrows:               ##
+        ## 37 seta pra esquerda 
+        ## 38 seta pra cima 
+        ## 39 seta pra direita 
+        ## 40 seta pra baixo ## -->
+
+
+
+    <script>
+        var px = 0;
+        var py = 0;
+        var espelhoX = 1800;
+        var espelhoY = 800;
+        
+
+        document.addEventListener("keydown" , function(event){
+            var obj = document.getElementById("dv1");
+            var objEspelho = document.getElementById("dv2");
+            var tecla = event.keyCode;
+            const movimento = 100; /* Quantidade de pixel a ser deslocada com a quantidade de apertos */
+
+            /* If que direcionam o key code */
+                if (tecla == 37) {
+                    px-=movimento;
+                    espelhoX+=movimento;
+                    obj.style.left = px + "px";
+                    objEspelho.style.left = espelhoX + "px";
+
+
+                } else if(tecla == 38){
+                    py-=movimento;
+                    espelhoY+=movimento;
+                    obj.style.top = py + "px";
+                    objEspelho.style.top = espelhoY + "px";
+
+                } else if(tecla == 39){
+                    px+=movimento;
+                    espelhoX-=movimento;
+                    obj.style.left = px + "px";
+                    objEspelho.style.left = espelhoX + "px";    
+
+                } else if(tecla == 40){
+                    py+=movimento;
+                    espelhoY-=movimento;
+
+                    obj.style.top = py + "px";
+                    objEspelho.style.top = espelhoY + "px";
+
+
+                }
+        });
+
+    </script>
+
+</head>
+<body>
+    <div id="dv1"></div>
+    <div id="dv2"></div>
+</body>
+</html>
