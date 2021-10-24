@@ -18,6 +18,7 @@ var numero_sorteado = Math.floor(Math.random() * tamanho_colecao);
 var pokemon_escolhido = curiosidades_pokemon[numero_sorteado];
 
 var nome_pokemon = pokemon_escolhido.pokemon;
+
 var curiosidade_pokemon = pokemon_escolhido.curiosidade;
 
 

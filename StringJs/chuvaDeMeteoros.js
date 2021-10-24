@@ -19,14 +19,11 @@ for (const chuva of chuvas_meteoros) {
     let nome_chuva = chuva.nome;
     let pico_chuva = chuva.pico;
     let velocidade_chuva = chuva.velocidade;
-
     let pico_mes_dia = pico_chuva.split(" "); // Quebra a Propriedade pico usando o espaço em um Array separa o Mês e o dia
-
 
     //Armazena as variaveis que passaram pelo procedimento de split
     let pico_dia = pico_mes_dia[1];
     let pico_mes = pico_mes_dia[0];
-
 
     let pico_mes_nome = "";
 
@@ -49,10 +46,8 @@ for (const chuva of chuvas_meteoros) {
 
     }
 
-
     //Formatações estéticas
     let pico_data_chuva_formatada = pico_dia + " de " + pico_mes_nome;
-
     let velocidade_formatada = velocidade_chuva.replace("km/s", "quilômetros por segundo");
 
 
