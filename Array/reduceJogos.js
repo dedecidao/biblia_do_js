@@ -13,4 +13,4 @@ function retornaNomeJogos(nomes, jogo) {
 
 const nomesJogos = jogos.reduce(retornaNomeJogos, '');
 
-console.log(nomesJogos);
+console.log(typeof(nomesJogos));

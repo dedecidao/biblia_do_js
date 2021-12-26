@@ -1,5 +1,8 @@
+// -- Melhor arquivo para aprender a se tranalhar com Dates pówered by: @dedecidao
+
 const dataDeHoje = new Date();
 
+dataDeHoje.get
 // console.log(dataDeHoje);
 
 

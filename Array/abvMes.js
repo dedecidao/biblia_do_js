@@ -6,7 +6,7 @@ const meses = [
 // function abreviar(mes) { //Função vai recebendo um por um do indice de acordo com o map
 //     return mes.substr(0, 3);
 // }
-const abreviar = mes => mes.substr(0, 3) // Con
+const abreviar = mes => mes.substr(0, 3) // arrow Function
 
 const abreviado = meses.map(abreviar);
 

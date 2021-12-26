@@ -1,0 +1,62 @@
+#menu {
+    display: block;
+    border: black 2px;
+    width: 40px;
+    margin: 10px;
+}
+
+
+.letra {
+
+    margin: 5px;
+    height: 30px;
+    width: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#letraJogador {
+    margin: 5px;
+    height: 30px;
+    width: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#jogador {
+    display: block;
+}
+
+
+#forca {
+    position: absolute;
+    border: 1px solid;
+    top: 300px;
+    left: 10px;
+}
+
+#cabeca {
+    position: absolute;
+    left: 202px;
+}
+#corpo {
+    position: absolute;
+    top: 234px;
+    left: 205px;
+}
+#bracoE {
+    position: absolute;
+    top: 174px;
+    left: 20px;
+}
+#bracoD {
+    position: absolute;
+    top: 175px;
+    left: 441px;
+}
+
+#pernaD {
+    position: absolute;
+    top: 488px;
+    left: 348px;
+}

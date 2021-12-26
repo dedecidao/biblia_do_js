@@ -1,3 +1,5 @@
+
+
 var colecao_series_programacao = [
     { nome: "Breaking Bad", horario: "21h", sinopse: "Um professor de química se transforma quando descobre ter um câncer terminal. Daí ele usa suas habilidades a favor do crime" },
     { nome: "Fargo", horario: "22h", sinopse: "Uma sequência de crimes saem errado e são investigados por uma detetive." },
