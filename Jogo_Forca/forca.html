@@ -36,8 +36,11 @@
     <div id="jogador">
         <p>Tente uma letra:</p>
         <input type="text" maxlength="1" id="letraJogador">
-        <button>Enviar</button>
+        <button onclick=jogar() type="submit">Enviar</button>
         <button>Pedir Dica</button>
+        <div id="dvMsg"></div>
+        <br/>
+        <div id="letrasDigitadas"></div>
     </div>
     <div id="forca">
         <img src="img/cabeca1.png" alt="" id="cabeca">
@@ -48,15 +51,136 @@
         <img src="img/pernaD.png" alt="" id="pernaD">
     </div>
 <script>
-    
+// Lib de Palavras Posiiveis:
+const biblioteca = [
+    'javascript',
+    'curso',
+    'computador',
+    'churrasco',
+    'controle',
+    'chinelo',
+    'bateria',
+    'guitarra',
+    'monitor',
+    'brasil',
+    'helicoptero',
+    'namorado',
+    'casamento',
+    'praia',
+    'desodorante',
+    'camiseta',
+];
+
+//Variaveis do jogo.
+
+let jogando = false;
+let jogada;
+let acertos = 0;
+let erros = 0;
+let acertou = false;
+let qtde = biblioteca.length;
+let pos = Math.round(Math.random() * qtde);
+let palavra = biblioteca[pos];
+let tam = palavra.length;
+let errosMax = 7;
+let desenhos = [];
 
 
-    function inicia() {
-        jogada = document.getElementById('letraJogador')
+function inicia() {
+
+    jogando = true;
+    jogada = document.getElementById('letraJogador');
+    jogada.value = null;
+    jogada.focus();
+    acertos = erros = 0;
+    acertou = false;
+    document.getElementById('letrasDigitadas').innerHTML = 'Letras Digitadas: ';
+    qtde = biblioteca.length;
+    pos = Math.round(Math.random() * qtde);
+    palavra = biblioteca[pos];
+    tam = palavra.length;
+    defineLetras(tam);
+    document.getElementById('dvMsg').innerHTML = '';
+    desenhos[1] = document.getElementById('cabeca');
+    desenhos[2] = document.getElementById('corpo');
+    desenhos[3] = document.getElementById('bracoE');
+    desenhos[4] = document.getElementById('bracoD');
+    desenhos[5] = document.getElementById('pernaE');
+    desenhos[6] = document.getElementById('pernaD');
+
+    document.getElementById('cabeca').src= 'img/cabeca1.png';
+
+    for (let index = 1; index < 7; index++) {
+        desenhos[index].style.display = 'none';        
+    }
+    console.log(palavra);
+}
+
+function defineLetras (tam) {
+
+    for(let i = 0 ; i < 20; i++){
+        document.getElementById('letra' + i).value = '';
+        document.getElementById('letra' + i).style.display = 'none';
+    }
+
+    for (let i = 0 ; i < tam; i++) {
+        obj = document.getElementById('letra' + i).style.display = 'inline-block';
+    }
+}
+
+function jogar () {
+    if (jogada.value === '') {
+        alert("Digite uma letra!");
+    }
+
+    if (jogando) {
         
-        
+        let obj;
+        let letraTmp;
+        let letra;
+        let pesq;
+
+        letra = jogada.value;
+        jogada.value = '';
+
+        acertou = false;
+
+        pesq = palavra.match(letra);
+        // console.log(letra);
+        // console.log(pesq);
+
+        while(pesq != null) {
+            letraTmp = palavra.search(letra); //Retorna a posicao q a letra esta
+            console.log(letraTmp);
+            obj = document.getElementById('letra' + letraTmp).value = letra;
+            palavra = palavra.replace(letra, '0');
+            acertos++;
+            pesq = palavra.match(letra);
+            acertou = true;
+            
+        }
+
+        if (!acertou) { //Se errou
+            document.getElementById('letrasDigitadas').innerHTML += letra.toUpperCase() + ' ';
+            erros ++;
+
+            if (erros < 7) {
+                desenhos[erros].style.display = 'block';
+            } else {
+                document.getElementById('cabeca').src= 'img/cabeca2.png';
+                document.getElementById('dvMsg').innerHTML = 'PERDEU!'
+                jogando = false;
+            }
+        }
+
+        if(acertos === tam) {
+            document.getElementById('dvMsg').innerHTML = "GANHOU!";
+            jogando = false;
+        }
+
 
     }
+}
 </script>
 </body>
 </html>
